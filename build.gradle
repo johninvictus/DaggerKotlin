@@ -22,7 +22,8 @@ allprojects {
     }
 }
 
-ext.daggerVersion = '2.13'
+ext.dagger_version = '2.13'
+ext.anko_version = '0.10.5'
 
 task clean(type: Delete) {
     delete rootProject.buildDir
