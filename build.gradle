@@ -27,6 +27,9 @@ ext.anko_version = '0.10.5'
 
 ext.retrofitVersion = '2.3.0'
 ext.okhttpVersion = '3.4.1'
+ext.arch_core = "1.1.1"
+ext.room = "1.1.1"
+ext.lifecycle = "1.1.1"
 
 task clean(type: Delete) {
     delete rootProject.buildDir

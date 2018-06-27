@@ -16,6 +16,7 @@ import com.kotlin.invictus.daggerkotlin.BuildConfig
 import com.kotlin.invictus.daggerkotlin.api.AuthInterceptor
 import com.kotlin.invictus.daggerkotlin.utils.AppConstants
 import com.kotlin.invictus.daggerkotlin.utils.AppConstants.Companion.CONNECT_TIMEOUT
+import com.kotlin.invictus.daggerkotlin.utils.LiveDataCallAdapterFactory
 import com.kotlin.invictus.daggerkotlin.utils.SessionManager
 import dagger.Module
 import okhttp3.Cache
@@ -91,7 +92,7 @@ class NetworkModule {
         val retrofit = Retrofit.Builder()
         return retrofit.baseUrl(AppConstants.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .addCallAdapterFactory(rxJava2CallAdapterFactory)
+                .addCallAdapterFactory(LiveDataCallAdapterFactory())
                 .client(okHttpClient)
                 .build()
     }
